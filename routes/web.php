@@ -7,7 +7,7 @@ use App\Http\Controllers\neracaSaldoController;
 use App\Http\Controllers\labaRugiController;
 use Illuminate\Support\Facades\Route;
 
-Route::inertia('/', 'welcome')->name('home');
+Route::get('/', [AccountController::class, 'index'])->name('home');
 Route::get('/jurnal', [JurnalController::class, 'index'])->name('jurnal.index');
 Route::post('/jurnal', [JurnalController::class, 'store'])->name('jurnal.store');
 Route::get('/bukuBesar', [bukuBesarController::class, 'index'])->name('buku-besar.index');

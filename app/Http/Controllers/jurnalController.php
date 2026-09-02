@@ -75,7 +75,7 @@ class JurnalController extends Controller
                 'reference_number' => $request->reference_number,
                 'description'      => $request->description,
             ]);
-            
+
             $jurnal->items()->delete();
 
             foreach ($request->items as $item) {
